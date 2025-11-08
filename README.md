@@ -33,5 +33,12 @@ In our case, the workflow to create such a dataset looked as follows:
 
 <img width="784" height="427" alt="Dataset_Creation" src="https://github.com/user-attachments/assets/16e8da12-5926-40c1-a405-9c3b57ef1b62" />
 
+Therefore:
+
+- target is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels
+- source is a folder containing the corresponding vector map tiles (in .png format) of size 512 x 512 pixels
+- prompt is a .json file that contains all prompts and links all .png's
+
+
 
 
