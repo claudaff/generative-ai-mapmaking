@@ -64,7 +64,7 @@ Open `trainCN.py`, adjust the settings (see our paper and the ControlNet tutoria
 
 ### 4. Evaluation
 
-After training, adjust and run `evaluateCN.py`.
+After training, adjust and run `evaluateCN.py`. The generated map tiles are saved as a numpy array and can then if needed be stitched together.
 
 
 
