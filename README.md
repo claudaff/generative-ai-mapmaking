@@ -53,7 +53,10 @@ Note:
 
 ### 2. Training 
 
+Load Dataset:
 
+Open `loadDataset.py` and adjust all three paths so that they point to the correct training data folder containg target, source and prompt.json.
+Then run the script. Optionally check if the dataset was loaded correctly using dataset_test.py as a sanity check.
 
 
 
