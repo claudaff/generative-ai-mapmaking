@@ -1,1 +1,12 @@
 # Generative AI in Map-Making: A Technical Exploration and Its Implications for Cartographers
+
+## Instructions
+
+### 1. Training prerequisites
+
+```sh
+git clone https://github.com/lllyasviel/ControlNet.git && cd ControlNet
+conda env create -f environment.yml
+conda activate control
+```
+Furthermore, read the official [ControlNet tutorial](https://github.com/lllyasviel/ControlNet/blob/main/docs/train.md). No action is required in Steps 0, 1, and 2. Then, in Step 3, one has to decide which version of Stable Diffusion should be used. In our work we employed Stable Diffusion 1.5. As this version belongs to the group of legacy deprecated Stable Diffusion models, you need to download "v1-5-pruned.ckpt" from [here](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/tree/main) instead. Alternatively, Stable Diffusion 2.1 ["v2-1_512-ema-pruned.ckpt"](https://huggingface.co/stabilityai/stable-diffusion-2-1-base/tree/main) or even newer versions could be used. But this was not tested by us. 
