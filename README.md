@@ -79,7 +79,7 @@ After training, adjust and run `evaluateCN.py`. The generated map tiles are save
 
 ## Web application
 
-![DemoVideo (online-video-cutter com)](https://github.com/user-attachments/assets/aa19a90b-5d65-470e-b8b4-dbb401cbf37e)
+![DemoVideo (online-video-cutter com) (1)](https://github.com/user-attachments/assets/d420a751-43ad-4ee5-b0f5-269427ec521d)
 
 Run `webapp.py`. 
 
