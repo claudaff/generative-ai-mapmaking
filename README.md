@@ -25,5 +25,9 @@ A ControlNet is now attached to the chose SD model.
 
 As already described in the tutorial, a ControlNet dataset is a triple structure consisting of the following elements:
 
-- 
+- source
+- target
+- prompt
+
+
 
