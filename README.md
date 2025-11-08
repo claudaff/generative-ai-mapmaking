@@ -29,11 +29,7 @@ A ControlNet is now attached to the chose SD model.
 
 ### 2. Dataset creation
 
-As already described in the tutorial, a ControlNet dataset is a triple structure consisting of the following elements:
-
-- target
-- source
-- prompt
+As already described in the tutorial, a ControlNet dataset is a triple structure consisting of _target_, _source_ and _prompt_:
 
 In our case, the workflow to create such a dataset looked as follows:
 
@@ -41,12 +37,12 @@ In our case, the workflow to create such a dataset looked as follows:
 
 Therefore:
 
-- target is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels. 
-- source is a folder containing the corresponding vector data in the form of vector map images (in .png format) of size 512 x 512 pixels. This folder thus contains the input
+- _target_ is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels. 
+- _source_ is a folder containing the corresponding vector data in the form of vector map images (in .png format) of size 512 x 512 pixels. This folder thus contains the input
 conditioning images with which Stable Diffusion will be controlled.
-- prompt is a .json file linking each image from target and source to a text prompt.
+- _prompt_ is a .json file linking each image from target and source to a text prompt.
 
-The contents of target, source and prompt.json should look as follows:
+The contents of _target_, _source_ and _prompt.json_ should look as follows:
 
 <img width="1137" height="202" alt="Dataset_Overview" src="https://github.com/user-attachments/assets/cb6248c0-203b-48b5-b18a-8fbc6ca158ef" />
 
@@ -70,12 +66,17 @@ Open `trainCN.py`, adjust the settings (see our paper and the ControlNet tutoria
 
 Note:
 
+- The better the alignment between _target_ and _source_ the better the resulting model.
 - Keep in mind that the evaluation loop might take some time to execute each epoch. Therefore, ideally the validation set should not consist of 1000s of tiles. In our work we chose 100 tiles.
 - Validation is done by computing the MSE between target (ground-truth) and generated map tile (model output). This metric only makes sense when training is done using perfectly corresponding vector data!
 
 ### 4. Evaluation
 
-After training, adjust and run `evaluateCN.py`. The generated map tiles are saved as a numpy array and can then if needed be stitched together.
+After training, adjust and run `evaluateCN.py` to qualitatively evaluate the model on a test set. The generated map tiles are saved as a numpy array and can then if needed be stitched together.
+
+Note:
+
+- When training the model with historical raster data without perfectly corresponding vector data, the generated map tiles can be of poor quality. One way to increase the output quality would be to generate multiple versions of the same tile using different seeds (set `seed = -1` and `num_samples = 6` or any other value larger than 1). Then, using a method of your choice, automatically select the best generated version. In our work we did this automatic selection by employing a segmentation model and also computing the standard deviation of pixel values in the background regions. 
 
 ## Web application
 
