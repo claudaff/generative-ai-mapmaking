@@ -35,7 +35,7 @@ In our case, the workflow to create such a dataset looked as follows:
 
 Therefore:
 
-- target is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels.
+- target is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels. 
 - source is a folder containing the corresponding vector data in the form of vector map images (in .png format) of size 512 x 512 pixels. This folder thus contains the input
 conditioning images with which Stable Diffusion will be controlled.
 - prompt is a .json file linking each image from target and source to a text prompt.
@@ -62,9 +62,18 @@ First, replace the `logger.py` located in the `cldm` folder with the `logger.py`
 
 Open `trainCN.py`, adjust the settings (see our paper and the ControlNet tutorial for reasonable values) and run the script to train ControlNet. To train using Low VRAM Mode, edit the config.py file accordingly.
 
+Note:
+
+- Keep in mind that the evaluation loop might take some time to execute each epoch. Therefore, ideally the validation set should not consist of 1000s of tiles. In our work we chose 100 tiles.
+- Validation is done by computing the MSE between target (ground-truth) and generated map tile (model output). This metric only makes sense when training is done using perfectly corresponding vector data!
+
 ### 4. Evaluation
 
 After training, adjust and run `evaluateCN.py`. The generated map tiles are saved as a numpy array and can then if needed be stitched together.
+
+## Web application
+
+
 
 
 
