@@ -46,9 +46,8 @@ The contents of target, source and prompt.json should look as follows:
 Note:
 
 - This workflow is straight-forward in cases where there exists perfectly corresponding vector data. That is usually the case for modern map styles. In the case of historical map styles, where the maps have not yet been vectorized, this procedure becomes more challenging. In our work, we decided to use the modern _Swisstopo_ vector data even for the historical _Siegfried_ and _Old National_ maps by adjusting the vector layers in a way (i.e., by removing certain layers completely) to achieve best possible aligmnent.
-- It is important to mask all map labels in the raster data AND vector data (see the neon blue areas, corresponding to the mask layer). If text is not masked in the training set, the generated map tiles will be subject to fake labels (i.e., illegible text that consists of made-up letters). Furthermore, also mask very niche classes that rarely appear.
-- 
-
+- It is important to mask all map labels in the raster data AND vector data (see the neon blue areas, corresponding to the mask layer). If text is not masked in the training set, the generated map tiles will be subject to fake labels (i.e., illegible text that consists of made-up letters). Furthermore, niche classes that rarely appear should be masked as well.
+- In our work, all tiles were of scale 1:5000. While it is possible to use smaller scales such as 1:25000, the outputs will likely be blurry with inadequate rendering of smaller objects.
 
 
 
