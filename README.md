@@ -58,13 +58,9 @@ Then run the script. Optionally check if the dataset was loaded correctly using 
 
 ### 3. Training
 
-First, replace the `logger.py` located in the `cldm` folder with the `logger.py` from this repository.
-There, check the comments and adjust the variables marked with `NEED`.
+First, replace the `logger.py` located in the `cldm` folder with the `logger.py` from this repository. There, check the comments and adjust the variables marked with `NEED`.
 
-Open trainCN.py, adjust settings and run the script to train ControlNet.
-For Siegfried, remove validation_loop and checkpoint_callback. The folder 'image_log' will create itself automatically.
-
-To train using Low VRAM Mode, edit the config.py file accordingly.
+Open `trainCN.py`, adjust the settings (see our paper and the ControlNet tutorial for possible values) and run the script to train ControlNet. To train using Low VRAM Mode, edit the config.py file accordingly.
 
 
 
