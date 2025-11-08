@@ -25,9 +25,13 @@ A ControlNet is now attached to the chose SD model.
 
 As already described in the tutorial, a ControlNet dataset is a triple structure consisting of the following elements:
 
-- source
 - target
+- source
 - prompt
+
+In our case, the workflow to create such a dataset looked as follows:
+
+<img width="784" height="427" alt="Dataset_Creation" src="https://github.com/user-attachments/assets/16e8da12-5926-40c1-a405-9c3b57ef1b62" />
 
 
 
