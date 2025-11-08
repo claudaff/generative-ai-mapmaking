@@ -2,6 +2,8 @@
 
 ## Instructions
 
+Step by step instructions on how to use vector data to control Stable Diffusion.
+
 ### 1. Training prerequisites
 
 ```sh
@@ -16,3 +18,12 @@ Afterwards, run the correct script depending on your chosen version of SD. In ou
 ```sh
 python tool_add_control.py ./models/v1-5-pruned.ckpt ./models/control_sd15_ini.ckpt
 ```
+
+A ControlNet is now attached to the chose SD model.
+
+### 2. Dataset creation
+
+As already described in the tutorial, a ControlNet dataset is a triple structure consisting of the following elements:
+
+- 
+
