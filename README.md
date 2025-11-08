@@ -37,7 +37,7 @@ As already described in the tutorial, a ControlNet dataset is a triple structure
 
 In our case, the workflow to create such a dataset looked as follows:
 
-<img width="784" height="427" alt="Dataset_Creation" src="https://github.com/user-attachments/assets/16e8da12-5926-40c1-a405-9c3b57ef1b62" />
+<img width="579" height="310" alt="Screenshot 2025-11-08 at 19 29 15" src="https://github.com/user-attachments/assets/0b55f6a5-ce04-465c-9038-73d594e10798" />
 
 Therefore:
 
