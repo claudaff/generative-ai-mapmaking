@@ -51,12 +51,20 @@ Note:
 - In our work, all tiles were of scale 1:5000. While it is possible to use smaller scales such as 1:25000, the outputs will likely be blurry with inadequate rendering of smaller objects.
 - It is also possible to train multiple map styles at once.
 
-### 2. Training 
-
-Load Dataset:
+### 2. Load dataset 
 
 Open `loadDataset.py` and adjust all three paths so that they point to the correct training data folder containg target, source and prompt.json.
 Then run the script. Optionally check if the dataset was loaded correctly using `dataset_test.py` as a sanity check.
+
+### 3. Training
+
+First, replace the `logger.py` located in the `cldm` folder with the `logger.py` from this repository.
+There, 
+
+Open trainCN.py, adjust settings and run the script to train ControlNet.
+For Siegfried, remove validation_loop and checkpoint_callback. The folder 'image_log' will create itself automatically.
+
+To train using Low VRAM Mode, edit the config.py file accordingly.
 
 
 
