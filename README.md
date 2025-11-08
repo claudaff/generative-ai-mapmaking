@@ -73,7 +73,11 @@ After training, adjust and run `evaluateCN.py`. The generated map tiles are save
 
 ## Web application
 
+Run `webapp.py`. 
 
+## Models
+
+Our ControlNet's can be downloaded [here](https://huggingface.co/claudaff/Cartographic-ControlNet/tree/main). `Combined.ckpt` is needed to run the web app.
 
 
 
