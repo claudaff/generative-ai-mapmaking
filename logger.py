@@ -21,6 +21,11 @@ from sewar import mse
 
 # Python script extending the original ControlNet logger.py script with a validation loop
 
+# Variables that can be adapted are marked with 'CAN'
+# Variables that need to be adapted are marked with 'NEED'
+
+
+
 class ImageLogger(Callback):
     def __init__(self, batch_frequency=2000, max_images=4, clamp=True, increase_log_steps=True,
                  rescale=True, disabled=False, log_on_batch_idx=False, log_first_step=False,
@@ -97,33 +102,33 @@ class Validation(Callback):
         print("Start Validation Process")
         model = pl_module
 
-        prompt = 'map in swisstopo style'
-        a_prompt = 'best quality, extremely detailed'
-        n_prompt = ''
+        prompt = 'map in swisstopo style' # NEED
+        a_prompt = 'best quality, extremely detailed' # Positive prompt. CAN
+        n_prompt = '' # Negative prompt. CAN
 
         image_resolution = 512
-        ddim_steps = 20
-        guess_mode = False
-        strength = 1
-        scale = 9
-        seed = 1286028432
-        eta = 0
+        ddim_steps = 20 # CAN
+        guess_mode = False # CAN
+        strength = 1 # CAN
+        scale = 9 # CAN
+        seed = 1286028432 # CAN
+        eta = 0 # CAN
 
         num_samples = 1
 
-        path_s = "ValidationSetSwisstopo/source"  # Validation set. Adjust Path to ValidationSetOldNational when training that Old National style
+        path_s = "ValidationSetSwisstopo/source"  # Validation set. NEED
         dir_list_s = os.listdir(path_s)
         source = dir_list_s
 
-        path_t = "ValidationSetSwisstopo/target"
+        path_t = "ValidationSetSwisstopo/target" # Validation set. NEED
         dir_list_t = os.listdir(path_t)
         target = dir_list_t
 
         source.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
         target.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
 
-        lower_bound = np.array([72, 255, 255, 255])  # label mask color
-        upper_bound = np.array([72, 255, 255, 255])
+        lower_bound = np.array([72, 255, 255, 255])  # Label mask color (neon blue in our work). NEED
+        upper_bound = np.array([72, 255, 255, 255])  # Label mask color. NEED
 
         is_train = pl_module.training
         if is_train:
@@ -202,7 +207,7 @@ class Validation(Callback):
 
                     MSE = MSE  # no change, and no increase in count
 
-                else:  # masked and non masked regions present -> need to use np.neanmean
+                else:  # masked and non masked regions present -> use np.neanmean
 
                     count += 1
                     imagemaskNan = cv2.merge((imagemaskNan, imagemaskNan, imagemaskNan))
