@@ -35,9 +35,10 @@ In our case, the workflow to create such a dataset looked as follows:
 
 Therefore:
 
-- target is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels
-- source is a folder containing the corresponding vector map tiles (in .png format) of size 512 x 512 pixels
-- prompt is a .json file that links each source .png to the corresponding target .png and corresponding prompt
+- target is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels.
+- source is a folder containing the corresponding vector data in the form of vector map images (in .png format) of size 512 x 512 pixels. This folder thus contains the input
+conditioning images with which Stable Diffusion will be controlled.
+- prompt is a .json file linking each image from target and source to a text prompt.
 
 The contents of target, source and prompt.json should look as follows:
 
@@ -48,6 +49,7 @@ Note:
 - This workflow is straight-forward in cases where there exists perfectly corresponding vector data. That is usually the case for modern map styles. In the case of historical map styles, where the maps have not yet been vectorized, this procedure becomes more challenging. In our work, we decided to use the modern _Swisstopo_ vector data even for the historical _Siegfried_ and _Old National_ maps by adjusting the vector layers in a way (i.e., by removing certain layers completely) to achieve best possible aligmnent.
 - It is important to mask all map labels in the raster data AND vector data (see the neon blue areas, corresponding to the mask layer). If text is not masked in the training set, the generated map tiles will be subject to fake labels (i.e., illegible text that consists of made-up letters). Furthermore, niche classes that rarely appear should be masked as well.
 - In our work, all tiles were of scale 1:5000. While it is possible to use smaller scales such as 1:25000, the outputs will likely be blurry with inadequate rendering of smaller objects.
+- It is also possible to train multiple map styles at once. 
 
 
 
