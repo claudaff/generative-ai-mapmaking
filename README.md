@@ -37,7 +37,9 @@ Therefore:
 
 - target is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels
 - source is a folder containing the corresponding vector map tiles (in .png format) of size 512 x 512 pixels
-- prompt is a .json file that contains all prompts and links all .png's
+- prompt is a .json file that links each source .png to the corresponding target .png and corresponding prompt
+
+
 
 
 
