@@ -41,7 +41,8 @@ Therefore:
 
 The contents should look as follows:
 
-<img width="984" height="174" alt="Dataset_Overview" src="https://github.com/user-attachments/assets/308a6a21-bc0d-4fb2-aa03-20ed62db7a95" />
+<img width="1137" height="202" alt="Dataset_Overview" src="https://github.com/user-attachments/assets/cb6248c0-203b-48b5-b18a-8fbc6ca158ef" />
+
 
 
 
