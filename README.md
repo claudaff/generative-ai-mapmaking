@@ -39,6 +39,11 @@ Therefore:
 - source is a folder containing the corresponding vector map tiles (in .png format) of size 512 x 512 pixels
 - prompt is a .json file that links each source .png to the corresponding target .png and corresponding prompt
 
+The contents should look as follows:
+
+<img width="984" height="174" alt="Dataset_Overview" src="https://github.com/user-attachments/assets/308a6a21-bc0d-4fb2-aa03-20ed62db7a95" />
+
+
 
 
 
