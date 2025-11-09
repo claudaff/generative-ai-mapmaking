@@ -89,7 +89,26 @@ Our four ControlNet models can be downloaded [here](https://huggingface.co/claud
 
 | Class label | RGB color code | Swisstopo | Old National | Siegfried |
 |-----------|-----------|-----------|-----------|-----------|
-| Background | (255, 255, 255) |✅ |✅ | ✅|
+| Background | (255, 255, 255) |✓|✓ | ✓|
+| Building | (255, 255, 255) |✓|✓ | ✓|
+| Coordinate grid | (255, 255, 255) |✓|✓ | ✓|
+| Railway (single track) | (255, 255, 255) |✓|✓ | ✓|
+| Railway (multi track) | (255, 255, 255) |✓|✓ | ✓|
+| Railway bridge | (255, 255, 255) |✓|✓ | ✓|
+| Highway | (255, 255, 255) |✓|✓ | ✓|
+| Highway gallery| (255, 255, 255) |✓|✓ | ✓|
+| Road | (255, 255, 255) |✓|✓ | ✓|
+| Through road | (255, 255, 255) |✓|✓ | ✓|
+| Connecting road | (255, 255, 255) |✓|✓ | ✓|
+| Path | (255, 255, 255) |✓|✓ | ✓|
+| Depth contour | (255, 255, 255) |✓|✓ | ✓|
+| River | (255, 255, 255) |✓|✓ | ✓|
+| Lake | (255, 255, 255) |✓|✓ | ✓|
+| Stream | (255, 255, 255) |✓|✓ | ✓|
+| Tree | (255, 255, 255) |✓|✓ | ✓|
+| Contour line | (255, 255, 255) |✓|✓ | ✓|
+| Forest | (255, 255, 255) |✓|✓ | ✓|
+
 
 
 ## Web application
