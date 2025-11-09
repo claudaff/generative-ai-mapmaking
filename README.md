@@ -37,7 +37,9 @@ In our case, the workflow to create such a dataset looked as follows:
 
 <img width="579" height="310" alt="Screenshot 2025-11-08 at 19 29 15" src="https://github.com/user-attachments/assets/0b55f6a5-ce04-465c-9038-73d594e10798" />
 
-Therefore:
+First we collected map sheets (raster data) along with corresponding vector data. In [QGIS](https://qgis.org/) we symbolized (i.e., assigned each vector layer a unique color, and adjusted point size and line thickness) and adapted (i.e., masked text labels and niche features) the vector data to achieve best possible alignement with the raster data. Afterwards, the raster data and the now adjusted and aligning vector data were saved separately in large .pngs that could then be tiled into much smaller raster map and vector map tiles.
+
+As a result:
 
 - _target_ is a folder containing raster map tiles (in .png format) of size 512 x 512 pixels. 
 - _source_ is a folder containing the corresponding vector data in the form of vector map images (in .png format) of size 512 x 512 pixels. This folder thus contains the input
@@ -51,7 +53,7 @@ The contents of _target_, _source_, and _prompt.json_ should look as follows:
 Note:
 
 - This workflow is straightforward in cases where there exists perfectly corresponding vector data. That is usually the case for modern map styles. In the case of historical map styles, where the maps have not yet been vectorized, this procedure becomes more challenging. In our work, we decided to use the modern _Swisstopo_ vector data even for the historical _Siegfried_ and _Old National_ maps by adjusting the vector layers in a way (i.e., by removing certain layers completely) to achieve the best possible alignment.
-- It is important to mask all map labels in the raster data AND vector data (see the neon blue areas, corresponding to the mask layer). If text is not masked in the training set, the generated map tiles will be subject to fake labels (i.e., illegible text that consists of made-up letters). Furthermore, niche classes that rarely appear should be masked as well.
+- It is important to mask all map labels in the raster data AND vector data (see the neon blue areas, corresponding to the mask layer). If text is not masked in the training set, the generated map tiles will be subject to fake labels (i.e., illegible text that consists of made-up letters). For text label masking we employed [keras-ocr](https://keras-ocr.readthedocs.io/en/latest/). Furthermore, niche classes that rarely appear should be masked as well.
 - In our work, all tiles were of scale 1:5000. While it is possible to use smaller scales such as 1:25000, the outputs will likely be blurry with inadequate rendering of smaller objects.
 - It is also possible to train multiple map styles at once.
 
