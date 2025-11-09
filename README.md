@@ -78,17 +78,20 @@ Note:
 
 - When training the model with historical raster data without perfectly corresponding vector data, the generated map tiles can be of poor quality. One way to increase the output quality would be to generate multiple versions of the same tile using different seeds (set `seed = -1` and `num_samples = 6` or any other value larger than 1). Then, using a method of your choice, automatically select the best generated version. In our work we did this automatic selection by employing a segmentation model and also computing the standard deviation of pixel values in the background regions. 
 
+## Models
+
+Our four ControlNet models can be downloaded [here](https://huggingface.co/claudaff/Cartographic-ControlNet/tree/main).
+
+1. `Swisstopo.ckpt`: Specialized model for _Swisstopo style_
+2. `OldNational.ckpt`: Specialized model for _Old National style_
+3. `Siegfried.ckpt`: Specialized model for _Siegfried style_
+4. `Combined.ckpt`: Combined model, capable of generating map tiles in all three styles and used in our web app.
+
 ## Web application
 
 ![DemoVideo (online-video-cutter com) (1)](https://github.com/user-attachments/assets/d420a751-43ad-4ee5-b0f5-269427ec521d)
 
-Run `webapp.py`. 
-
-## Models
-
-Our ControlNets can be downloaded [here](https://huggingface.co/claudaff/Cartographic-ControlNet/tree/main). `Combined.ckpt` is needed to run the web app.
-
-
+Run `webapp.py` with `Combined.ckpt` as the underlying model.
 
 
 
