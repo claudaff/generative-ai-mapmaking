@@ -96,7 +96,7 @@ Our four ControlNet models can be downloaded [here](https://huggingface.co/claud
 | Railway (multi track) |  (144, 20, 28) |✓|✓ | ✓|
 | Railway bridge | (226, 132, 115) |✓| | |
 | Highway |  (247, 128, 30) |✓|✓ | |
-| Highway gallery| (231, 119, 28) |✓|✓ | ✓|
+| Highway gallery| (231, 119, 28) |✓|| |
 | Road | (149, 74, 162) |✓|✓ | ✓|
 | Through road | (255, 103, 227) |✓| | |
 | Connecting road | (128, 135, 37) |✓| | |
