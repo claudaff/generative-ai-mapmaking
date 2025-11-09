@@ -83,7 +83,7 @@ Note:
 - When training the model with historical raster data without perfectly corresponding vector data, the generated map tiles can be of poor quality. One way to increase the output quality would be to generate multiple versions of the same tile using different seeds (set `seed = -1` and `num_samples = 6` or any other value larger than 1). Then, using a method of your choice, automatically select the best generated version. In our work we did this automatic selection by employing a segmentation model and also computing the standard deviation of pixel values in the background regions (to check by how much the generated background textures differ from the original ground-truth background texture).
 
 The figure below shows six versions of a generated map tile. Different seeds were used but the input vector map tile remained the same.
-<img width="1180" height="234" alt="seed" src="https://github.com/user-attachments/assets/e53ffd7a-d38a-4238-879b-797224cc0d1b" />
+<img width="817" height="164" alt="seed" src="https://github.com/user-attachments/assets/a34ffaff-bcd2-4e55-8ca8-e55e5d89378e" />
 
 ## Models
 
