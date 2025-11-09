@@ -42,7 +42,7 @@ Therefore:
 conditioning images with which Stable Diffusion will be controlled.
 - _prompt_ is a .json file linking each image from _target_ and _source_ to a text prompt.
 
-The contents of _target_, _source_ and _prompt.json_ should look as follows:
+The contents of _target_, _source_, and _prompt.json_ should look as follows:
 
 <img width="1137" height="202" alt="Dataset_Overview" src="https://github.com/user-attachments/assets/cb6248c0-203b-48b5-b18a-8fbc6ca158ef" />
 
@@ -66,13 +66,13 @@ Open `trainCN.py`, adjust the settings (see our paper and the ControlNet tutoria
 
 Note:
 
-- The better the alignment between _target_ and _source_ the better the resulting model.
+- The better the alignment between _target_ and _source_, the better the resulting model.
 - Keep in mind that the evaluation loop might take some time to execute each epoch. Therefore, ideally the validation set should not consist of 1000s of tiles. In our work we chose 100 tiles.
-- Validation is done by computing the MSE between target (ground-truth) and generated map tile (model output). This metric only makes sense when training is done using perfectly corresponding vector data!
+- Validation is done by computing the MSE between target (ground-truth) and the generated map tile (model output). This metric only makes sense when training is done using perfectly corresponding vector data!
 
 ### 4. Evaluation
 
-After training, adjust and run `evaluateCN.py` to qualitatively evaluate the model on a test set. The generated map tiles are saved as a numpy array and can then if needed be stitched together.
+After training, adjust and run `evaluateCN.py` to qualitatively evaluate the model on a test set. The generated map tiles are saved as a NumPy array and can then, if needed, be stitched together.
 
 Note:
 
@@ -96,7 +96,7 @@ Our four ControlNet models can be downloaded [here](https://huggingface.co/claud
 | Railway (multi track) |  (144, 20, 28) |✓|✓ | ✓|
 | Railway bridge | (226, 132, 115) |✓| | |
 | Highway |  (247, 128, 30) |✓|✓ | |
-| Highway gallery| (231, 119, 28) |✓|| |
+| Highway gallery| (231, 119, 28) |✓|✓ | ✓|
 | Road | (149, 74, 162) |✓|✓ | ✓|
 | Through road | (255, 103, 227) |✓| | |
 | Connecting road | (128, 135, 37) |✓| | |
