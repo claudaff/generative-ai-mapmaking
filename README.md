@@ -90,24 +90,24 @@ Our four ControlNet models can be downloaded [here](https://huggingface.co/claud
 | Class label | RGB color code | Swisstopo | Old National | Siegfried |
 |-----------|-----------|-----------|-----------|-----------|
 | Background | (255, 255, 255) |✓|✓ | ✓|
-| Building | (255, 255, 255) |✓|✓ | ✓|
-| Coordinate grid | (255, 255, 255) |✓|✓ | ✓|
-| Railway (single track) | (255, 255, 255) |✓|✓ | ✓|
-| Railway (multi track) | (255, 255, 255) |✓|✓ | ✓|
-| Railway bridge | (255, 255, 255) |✓|✓ | ✓|
-| Highway | (255, 255, 255) |✓|✓ | ✓|
-| Highway gallery| (255, 255, 255) |✓|✓ | ✓|
-| Road | (255, 255, 255) |✓|✓ | ✓|
-| Through road | (255, 255, 255) |✓|✓ | ✓|
-| Connecting road | (255, 255, 255) |✓|✓ | ✓|
-| Path | (255, 255, 255) |✓|✓ | ✓|
-| Depth contour | (255, 255, 255) |✓|✓ | ✓|
-| River | (255, 255, 255) |✓|✓ | ✓|
-| Lake | (255, 255, 255) |✓|✓ | ✓|
-| Stream | (255, 255, 255) |✓|✓ | ✓|
-| Tree | (255, 255, 255) |✓|✓ | ✓|
-| Contour line | (255, 255, 255) |✓|✓ | ✓|
-| Forest | (255, 255, 255) |✓|✓ | ✓|
+| Building | (82, 82, 82) |✓|✓ | ✓|
+| Coordinate grid | (237, 240, 64) |✓|✓ | ✓|
+| Railway (single track) |  (219, 30, 42) |✓|✓ | ✓|
+| Railway (multi track) |  (144, 20, 28) |✓|✓ | ✓|
+| Railway bridge | (226, 132, 115) |✓| | |
+| Highway |  (247, 128, 30) |✓|✓ | |
+| Highway gallery| (231, 119, 28) |✓|✓ | ✓|
+| Road | (149, 74, 162) |✓|✓ | ✓|
+| Through road | (255, 103, 227) |✓| | |
+| Connecting road | (128, 135, 37) |✓| | |
+| Path |  (0, 0, 0) |✓|✓ | ✓|
+| Depth contour | (63, 96, 132) |✓|✓ | |
+| River | (41, 163, 215) |✓|✓ | ✓|
+| Lake | (55, 126, 184) |✓|✓ | ✓|
+| Stream |  (89, 180, 208) |✓|✓ | ✓|
+| Tree | (63, 131, 55) |✓| | |
+| Contour line | (164, 113, 88) |✓|✓ | |
+| Forest | (77, 175, 74) |✓|✓ | ✓|
 
 
 
