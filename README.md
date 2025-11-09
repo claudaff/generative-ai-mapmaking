@@ -80,7 +80,8 @@ After training, adjust and run `evaluateCN.py` to qualitatively evaluate the mod
 
 Note:
 
-- When training the model with historical raster data without perfectly corresponding vector data, the generated map tiles can be of poor quality. One way to increase the output quality would be to generate multiple versions of the same tile using different seeds (set `seed = -1` and `num_samples = 6` or any other value larger than 1). Then, using a method of your choice, automatically select the best generated version. In our work we did this automatic selection by employing a segmentation model and also computing the standard deviation of pixel values in the background regions. 
+- When training the model with historical raster data without perfectly corresponding vector data, the generated map tiles can be of poor quality. One way to increase the output quality would be to generate multiple versions of the same tile using different seeds (set `seed = -1` and `num_samples = 6` or any other value larger than 1). Then, using a method of your choice, automatically select the best generated version. In our work we did this automatic selection by employing a segmentation model and also computing the standard deviation of pixel values in the background regions (to check by how much the generated background textures differ from the original ground-truth background texture).
+
 
 ## Models
 
