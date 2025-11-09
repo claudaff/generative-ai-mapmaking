@@ -87,6 +87,11 @@ Our four ControlNet models can be downloaded [here](https://huggingface.co/claud
 3. `Siegfried.ckpt`: Specialized model for _Siegfried style_
 4. `Combined.ckpt`: Combined model, capable of generating map tiles in all three styles and used in our web app.
 
+| Class label | RGB color code | Swisstopo | Old National | Siegfried |
+|-----------|-----------|-----------|-----------|-----------|
+| Background | (255, 255, 255) |✅ |✅ | ✅|
+
+
 ## Web application
 
 ![DemoVideo (online-video-cutter com) (1)](https://github.com/user-attachments/assets/d420a751-43ad-4ee5-b0f5-269427ec521d)
