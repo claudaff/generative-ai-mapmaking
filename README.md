@@ -37,7 +37,7 @@ In our case, the workflow to create such a dataset looked as follows:
 
 <img width="579" height="310" alt="Screenshot 2025-11-08 at 19 29 15" src="https://github.com/user-attachments/assets/0b55f6a5-ce04-465c-9038-73d594e10798" />
 
-First we collected map sheets (raster data) along with corresponding vector data. In [QGIS](https://qgis.org/) we symbolized (i.e., assigned each vector layer a unique color, and adjusted point size and line thickness) and adapted (i.e., masked text labels and niche features) the vector data to achieve best possible alignement with the raster data. Afterwards, the raster data and the now adjusted and aligning vector data were saved separately in large .pngs that could then be tiled into much smaller raster map and vector map tiles.
+First we collected map sheets (raster data) along with corresponding vector data. In [QGIS](https://qgis.org/) we symbolized (i.e., assigned each vector layer a unique color, and adjusted point size and line thickness) and adapted (i.e., masked text labels and niche features) the vector data to achieve best possible alignement with the raster data. Afterwards, the raster data and the now adjusted and aligning vector data were saved separately as large .pngs that could then be tiled into much smaller raster map and vector map tiles. It is important to already define the desired scale in the QGIS print layout before exporting the large .pngs.
 
 As a result:
 
